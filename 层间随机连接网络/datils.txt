@@ -1,0 +1,1 @@
+修改DenseNet的层间全连接为层间随机连接，未完成，Block的forward阶段有问题，训练时要么内存溢出要么buffer被清空。
