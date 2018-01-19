@@ -1,0 +1,7 @@
+简化的DenseNet:Test Loss:0.733816,Accuracy:0.740800，10条连线
+固定的随机连接网络5_1：Test Loss:0.486186,Accuracy:0.834700，5条随机连线
+固定的随机连接网络5_2：Test Loss:0.475113,Accuracy:0.837300，5条随机连线
+固定的随机连接网络4：Test Loss:0.500242,Accuracy:0.828100，4条随机连线
+固定的随机连接网络6：Test Loss:0.489224,Accuracy:0.831400，6条随机连线
+固定的随机连接网络3：Test Loss:0.497349,Accuracy:0.827900，3条随机连线
+
