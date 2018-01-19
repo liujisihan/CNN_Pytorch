@@ -17,6 +17,7 @@ train_loader=DataLoader(dataset=train_dataset,batch_size=batch_size,shuffle=True
 
 #模型声明
 model=Random_Connect(num_init_features=32,bn_size=4,num_classes=10)
+# model.load_state_dict(torch.load('./Fixed_Random_Connect_1/Fixed_Random_Connect_10.pkl'))
 if torch.cuda.is_available():
     model=model.cuda()
 # print(model)
@@ -58,7 +59,7 @@ for epoch in range(num_epoches):
             loss_data.append(str(loss.data[0]))
             # writer.writerow(loss_data)
             # loss_data.clear()
-    if(epoch+1)%10==0:
+    if(epoch+1)%5==0:
         # 每10个epoch保存一个模型
         torch.save(model.state_dict(), './Fixed_Random_Connect_1/Fixed_Random_Connect_{}.pkl'.format(epoch+1))
 writer.writerow(loss_data)

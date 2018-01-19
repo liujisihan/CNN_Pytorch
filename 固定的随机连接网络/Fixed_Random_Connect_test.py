@@ -13,7 +13,7 @@ data_tf = transforms.Compose([transforms.ToTensor(),transforms.Normalize([0.5,0.
 
 # 加载测试集
 
-test_dataset = datasets.CIFAR10(root='./data', train=False, transform=data_tf, download=True)
+test_dataset = datasets.CIFAR10(root='./data', train=False, transform=data_tf, download=False)
 test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
 # 加载模型
@@ -53,4 +53,4 @@ for i,data in enumerate(test_loader,0):
     print('batch of {}/200'.format(i))
 
 print('Test Loss:{:.6f},Accuracy:{:.6f}'.format(test_loss/(len(test_dataset)),test_acc/(len(test_dataset))))
-#Test Loss:0.558947,Accuracy:0.813300
+#Test Loss:0.486186,Accuracy:0.834700
